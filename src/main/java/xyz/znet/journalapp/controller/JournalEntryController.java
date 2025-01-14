@@ -8,13 +8,12 @@ import org.springframework.web.bind.annotation.*;
 import xyz.znet.journalapp.entity.JournalEntry;
 import xyz.znet.journalapp.service.JournalEntryService;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/journal")
-public class JournalEntryControllerv2 {
+public class JournalEntryController {
 
     @Autowired
     private JournalEntryService journalEntryService;
@@ -31,7 +30,6 @@ public class JournalEntryControllerv2 {
     @PostMapping
     public ResponseEntity<JournalEntry> createEntry(@RequestBody JournalEntry myentry){
         try {
-            myentry.setDate(LocalDateTime.now());
             journalEntryService.saveEntry( myentry );
 
             return new ResponseEntity<>(myentry, HttpStatus.CREATED);
