@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import xyz.znet.journalapp.entity.JournalEntry;
 import xyz.znet.journalapp.entity.User;
 import xyz.znet.journalapp.repository.JournalEntryRepository;
@@ -20,6 +21,7 @@ public class JournalEntryService {
     private JournalEntryRepository journalEntryRepository;
     @Autowired
     private UserService userService;
+    @Transactional
     public void saveEntry(JournalEntry journalEntry, String userName) {
         try {
             User user = userService.findByUsername(userName);
@@ -29,6 +31,7 @@ public class JournalEntryService {
             userService.saveEntry(user);
         } catch (Exception e) {
             log.error("Exception:", e);
+            throw new RuntimeException("Exception:", e);
         }
 
     }
