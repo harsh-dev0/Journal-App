@@ -7,4 +7,5 @@ import xyz.znet.journalapp.entity.User;
 
 public interface UserRepository extends MongoRepository<User, ObjectId> {
     User findByUserName(@NonNull String userName);
+    User deleteByUserName(@NonNull String userName);
 }
