@@ -10,8 +10,6 @@ import xyz.znet.journalapp.entity.User;
 import xyz.znet.journalapp.repository.UserRepository;
 import xyz.znet.journalapp.service.UserService;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -29,7 +27,7 @@ public class UserController {
         User userInDb = userService.findByUsername(userName);
         userInDb.setUserName(user.getUserName());
         userInDb.setPassword(user.getPassword());
-        userService.saveEntry(userInDb);
+        userService.saveNewEntry(userInDb);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
