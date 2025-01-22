@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import xyz.znet.journalapp.entity.User;
 import xyz.znet.journalapp.repository.UserRepository;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,6 +35,16 @@ public class UserService {
     }
     public void saveUser(User user) {
         userRepository.save(user);
+    }
+    public void saveAdmin(User user) {
+        try {
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
+            user.setRoles(Arrays.asList("USER","ADMIN"));
+            userRepository.save(user);
+
+        } catch (Exception e) {
+            log.error("Exception:", e);
+        }
     }
     public List<User> getAll() {
         return userRepository.findAll();

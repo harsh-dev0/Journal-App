@@ -13,11 +13,6 @@ public class PublicController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/get-all")
-    public List<User> getAll() {
-        return userService.getAll();
-    }
-
     @PostMapping("/create-user")
     public void createUser(@RequestBody User user) {
         userService.saveNewEntry(user);
