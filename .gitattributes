@@ -1,2 +1,9 @@
+# Automatically handle line endings for all text files
+* text=auto
+
+# Ensure specific file types always use LF line endings
+*.sh text eol=lf
+*.py text eol=lf
+*.md text eol=lf
 /mvnw text eol=lf
 *.cmd text eol=crlf
