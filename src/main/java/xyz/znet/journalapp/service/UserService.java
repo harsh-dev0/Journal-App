@@ -30,6 +30,12 @@ public class UserService {
             return true;
         } catch (Exception e) {
             log.error("Exception:", e);
+// ways to log with he;p of slf4j
+//            log.error("hahahhahhahahahah");
+//            log.warn("hahahhahhahahahah");
+//            log.info("hahahhahhahahahah");
+//            log.debug("hahahhahhahahahah");
+//            log.trace("hahahhahhahahahah");
             return false;
         }
 
