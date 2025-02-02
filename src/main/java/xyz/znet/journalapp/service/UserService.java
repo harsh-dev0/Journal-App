@@ -2,6 +2,7 @@ package xyz.znet.journalapp.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -12,6 +13,7 @@ import xyz.znet.journalapp.repository.UserRepository;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Logger;
 
 @Service
 @Slf4j
@@ -19,6 +21,8 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+//    private static final Logger logger = (Logger) LoggerFactory.getLogger(UserService.class);
 
     private static final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
@@ -31,7 +35,7 @@ public class UserService {
         } catch (Exception e) {
             log.error("Exception:", e);
 // ways to log with he;p of slf4j
-//            log.error("hahahhahhahahahah");
+//            log.error("Error Occurred: {}", user.getUserName(), e);
 //            log.warn("hahahhahhahahahah");
 //            log.info("hahahhahhahahahah");
 //            log.debug("hahahhahhahahahah");
