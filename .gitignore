@@ -21,7 +21,8 @@ target/
 
 .env
 *.yml
-*.log
+
+.log
 
 ### NetBeans ###
 /nbproject/private/
