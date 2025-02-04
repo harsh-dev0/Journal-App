@@ -1,3 +1,0 @@
-25-02-04 21:36:36.938 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error 
-25-02-04 21:36:36.941 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /error 
-25-02-04 21:36:36.980 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to flush: java.nio.channels.ClosedChannelException] 
