@@ -1,0 +1,19 @@
+25-02-04 21:32:24.279 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /user 
+25-02-04 21:32:24.350 [http-nio-8080-exec-9] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user 
+25-02-04 21:32:24.350 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.w.BasicAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=ZneT, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]] 
+25-02-04 21:32:24.351 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /user 
+25-02-04 21:32:24.829 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error 
+25-02-04 21:32:24.829 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /error 
+25-02-04 21:32:35.215 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /user 
+25-02-04 21:32:35.285 [http-nio-8080-exec-2] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user 
+25-02-04 21:32:35.285 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.w.BasicAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=ZneT, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]] 
+25-02-04 21:32:35.285 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /user 
+25-02-04 21:32:35.483 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error 
+25-02-04 21:32:35.483 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /error 
+25-02-04 21:32:45.336 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /user 
+25-02-04 21:32:45.403 [http-nio-8080-exec-4] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user 
+25-02-04 21:32:45.403 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.w.BasicAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=ZneT, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]] 
+25-02-04 21:32:45.404 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured POST /user 
+25-02-04 21:32:45.405 [http-nio-8080-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported] 
+25-02-04 21:32:45.406 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /error 
+25-02-04 21:32:45.406 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured POST /error 

@@ -6,9 +6,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
+import xyz.znet.journalapp.api.response.WeatherResponse;
 import xyz.znet.journalapp.entity.User;
 import xyz.znet.journalapp.repository.UserRepository;
 import xyz.znet.journalapp.service.UserService;
+import xyz.znet.journalapp.service.WeatherService;
 
 @RestController
 @RequestMapping("/user")
@@ -18,7 +20,8 @@ public class UserController {
     private UserService userService;
     @Autowired
     private UserRepository userRepository;
-
+    @Autowired
+    private WeatherService weatherService;
 
     @PutMapping
     public ResponseEntity<?> updateUser(@RequestBody User user) {
@@ -31,6 +34,16 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    @GetMapping
+    public ResponseEntity<?> greeting() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        WeatherResponse weatherResponse = weatherService.getWeather("Mumbai");
+        String greeting ="";
+        if(weatherResponse != null) {
+            greeting = ", Weather Feels Like"+ weatherResponse.getMain().getFeelsLike();
+        }
+        return new ResponseEntity<>("hi"+ authentication.getName() + greeting, HttpStatus.OK);
+    }
     @DeleteMapping
     public ResponseEntity<?> deleteUserById() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
